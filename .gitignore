@@ -259,3 +259,14 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/BingAPIClient/App - Copy.config
+/BingAPIClient.Test/App - Copy.config
+/BingAPIClient.Test/App - Copy.config
+/PressmonClient/App - Copy.config
+/PressmonClient.Test/App - Copy.config
+/TableStorage.Test/App - Copy.config
+/TableStorageTest/App - Copy.config
+/WikitionaryClient/App - Copy.config
+/WikitionaryClient.Test/App - Copy.config
+/WordAPIClient/App - Copy.config
+/WordAPIClient.Test/App - Copy.config
