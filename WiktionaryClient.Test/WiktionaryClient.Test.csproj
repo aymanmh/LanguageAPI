@@ -43,15 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WikitionaryClientTests.cs" />
+    <Compile Include="WiktionaryClientTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WikitionaryClient\WikitionaryClient.csproj">
+    <ProjectReference Include="..\WiktionaryClient\WiktionaryClient.csproj">
       <Project>{9b59db3e-ad7d-4730-b14c-19581e846f58}</Project>
       <Name>WikitionaryClient</Name>
     </ProjectReference>

@@ -13,7 +13,7 @@ namespace LanguageBot.Test
         [Test]
         public void getNewRandomWordTest()
         {
-            TableManager testTableManager = new TableManager();
+            TableStorageClient testTableManager = new TableStorageClient();
 
             var returnedValue = testTableManager.getRandomWord();
 
@@ -27,7 +27,9 @@ namespace LanguageBot.Test
         [Test]
         public void getAnyRandomWordTest()
         {
-            TableManager testTableManager = new TableManager();
+            //TableStorageClient testTableManager = new TableStorageClient();
+
+            TableStorageClient testTableManager = new TableStorageClient("UseDevelopmentStorage=true;", "BigWords", "1218");
 
             var returnedValue = testTableManager.getRandomWord(false);
 
@@ -40,7 +42,7 @@ namespace LanguageBot.Test
         [Test]
         public void getWord([Values(217)]int id)
         {
-            TableManager testTableManager = new TableManager();
+            TableStorageClient testTableManager = new TableStorageClient();
 
             var returnedValue = testTableManager.getWord(id.ToString());
 
@@ -54,7 +56,7 @@ namespace LanguageBot.Test
         [Test]
         public void setWordUsedStatus([Values(217)]int id)
         {
-            TableManager testTableManager = new TableManager();
+            TableStorageClient testTableManager = new TableStorageClient();
 
             BigWordEntity myWord = testTableManager.getWord(id.ToString());
 
@@ -73,7 +75,7 @@ namespace LanguageBot.Test
         [Test]
         public void resetWordUsedStatus([Values(217)]int id)
         {
-            TableManager testTableManager = new TableManager();
+            TableStorageClient testTableManager = new TableStorageClient();
 
             BigWordEntity myWord = testTableManager.getWord(id.ToString());
 
@@ -89,15 +91,16 @@ namespace LanguageBot.Test
 
         }
         
-        /*
+        
         [Test]
         public void populateTable(
-            [Values(@"C: \Users\Ayman\Documents\visual studio 2017\Projects\AzureProjects\TableStorageTest\bigwords.txt")]string filePath)
+            [Values(@"bigwords.txt")]string filePath)
         {
-            TableManager testTableManager = new TableManager();
+            TableStorageClient testTableManager = new TableStorageClient();
+
             testTableManager.populateTable(filePath);
             Assert.Pass();
         }
-        */
+       
     }
 }

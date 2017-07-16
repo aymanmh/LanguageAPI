@@ -7,8 +7,8 @@
     <ProjectGuid>{9B59DB3E-AD7D-4730-B14C-19581E846F58}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WikitionaryClient</RootNamespace>
-    <AssemblyName>WikitionaryClient</AssemblyName>
+    <RootNamespace>WiktionaryClient</RootNamespace>
+    <AssemblyName>WiktionaryClient</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -66,7 +66,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WikitionaryClient.cs" />
+    <Compile Include="WiktionaryClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStorageClient", "TableStorageTest\TableStorageClient.csproj", "{94D69289-3E2F-4A8D-95E3-03A2003C4CED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStorageClient", "TableStorageClient\TableStorageClient.csproj", "{94D69289-3E2F-4A8D-95E3-03A2003C4CED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableStorage.Test", "TableStorage.Test\TableStorage.Test.csproj", "{2C0B9ED5-79D6-4F63-9943-7D96CBA0405A}"
 EndProject
@@ -19,11 +19,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PressmonClient", "PressmonC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PressmonClient.Test", "PressmonClient.Test\PressmonClient.Test.csproj", "{4E20C485-8006-41EC-9AC5-AC381FCAD183}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wikitionary", "Wikitionary", "{429C77EB-F00A-4267-867B-4CAA366A3521}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Wiktionary", "Wiktionary", "{429C77EB-F00A-4267-867B-4CAA366A3521}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikitionaryClient", "WikitionaryClient\WikitionaryClient.csproj", "{9B59DB3E-AD7D-4730-B14C-19581E846F58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiktionaryClient", "WiktionaryClient\WiktionaryClient.csproj", "{9B59DB3E-AD7D-4730-B14C-19581E846F58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikitionaryClient.Test", "WikitionaryClient.Test\WikitionaryClient.Test.csproj", "{D692D610-2F31-4EBD-8706-BAAA9A683A29}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikitionaryClient.Test", "WiktionaryClient.Test\WiktionaryClient.Test.csproj", "{D692D610-2F31-4EBD-8706-BAAA9A683A29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BingAPIClient", "BingAPIClient\BingAPIClient.csproj", "{054464D6-EECF-47E3-B399-4CCEE05D5804}"
 EndProject

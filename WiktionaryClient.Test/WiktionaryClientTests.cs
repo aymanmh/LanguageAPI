@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 namespace LanguageBot.Test
 {
     [TestFixture]
-    public class WikitionaryClientTests
+    public class WiktionaryClientTests
     {
         [Test]
         public void getWikitionaryEntryUrlTest([Values("tryst","jdhskdjf")] string word)
         {
-            WikitionaryClient myWikiClient = new WikitionaryClient();
+            WiktionaryClient myWikiClient = new WiktionaryClient();
 
             string url = myWikiClient.getWikitionaryEntryUrl(word);
 

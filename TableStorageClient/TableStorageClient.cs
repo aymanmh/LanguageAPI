@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LanguageBot
 {
-    public class TableManager
+    public class TableStorageClient
     {
         private CloudStorageAccount storageAccount;
         private CloudTableClient myTableClient;
@@ -17,7 +17,7 @@ namespace LanguageBot
         private int numberOfWords;
         private string tableName;
 
-        public TableManager()
+        public TableStorageClient()
         {
             try
             {
@@ -33,10 +33,11 @@ namespace LanguageBot
             }
         }
 
-        public TableManager(string storageAccount,string tableName,string numberOfWords)
+        public TableStorageClient(string storageAccount,string tableName,string numberOfWords)
         {
             try
             {
+                
                 this.storageAccount = CloudStorageAccount.Parse(storageAccount);
                 this.tableName = tableName;
                 this.numberOfWords = int.Parse(numberOfWords.ToString());
@@ -61,7 +62,7 @@ namespace LanguageBot
         {
             try
             {
-                myTable.DeleteIfExists();
+                //myTable.DeleteIfExists(); //this will take long time and the next statment throws an exception, delete manuallt instead.
                 myTable.CreateIfNotExists();
 
                 int counter = 0; //will use it as ID
@@ -88,7 +89,7 @@ namespace LanguageBot
             Random rnd = new Random();
             int randomId = 0;
             while (tryCount++ < numberOfWords)
-            { 
+            {
                 randomId = rnd.Next(0, numberOfWords);
 
                 try
@@ -97,6 +98,9 @@ namespace LanguageBot
 
                     // Execute the retrieve operation.
                     var retrievedResult = myTable.ExecuteQuery(query);
+
+                    if (retrievedResult.Count() == 0)
+                        throw new Exception($"word id {randomId} was not found in the table");
 
                     if (isNewWord == false)
                         return retrievedResult.First();
@@ -112,7 +116,7 @@ namespace LanguageBot
                     throw ex;
                 }
             }
-            throw new Exception("Unable to find new words, all words has been used.");
+            throw new Exception("Unable to find new words, all words have been used!.");
         }
 
         public BigWordEntity getWord(string Id)

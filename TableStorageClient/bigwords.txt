@@ -640,7 +640,7 @@ irascible
 irate
 iridescent
 irresolute
-irrevocably
+irrevocable
 iterate
 itinerant
 itinerary

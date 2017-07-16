@@ -11,11 +11,11 @@ using unirest_net.http;
 namespace LanguageBot
 {
     [Serializable]
-    public class WikitionaryClient
+    public class WiktionaryClient
     {
         private string endpointURL;
 
-        public WikitionaryClient()
+        public WiktionaryClient()
         {
             try
             {
@@ -27,12 +27,12 @@ namespace LanguageBot
             }
         }
 
-        public WikitionaryClient(string endpointURL)
+        public WiktionaryClient(string endpointURL)
         {
             this.endpointURL = endpointURL;
         }
 
-        public string getWikitionaryEntryUrl(string word)
+        public string getWiktionaryEntryUrl(string word)
         {
             try
             {
@@ -41,7 +41,7 @@ namespace LanguageBot
                .asJson<string>();
 
                 if (response.Code != 200)
-                    throw new Exception($"Wikitionary API returned error code {response.Code} - message {response.Body}");
+                    throw new Exception($"Wiktionary API returned error code {response.Code} - message {response.Body}");
 
                 var json = JsonConvert.DeserializeObject<dynamic>(response.Body);
 
